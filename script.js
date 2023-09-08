@@ -12,6 +12,9 @@ const daysOfWeek = [
 	'Saturday',
 ];
 
-infoDay.innerHTML = `<span>Day: </span> ${daysOfWeek[date.getDay()]},`;
+setInterval(function () {
+	const date = new Date().getTime();
+	infoTime.textContent = date;
+}, 1000);
 
-infoTime.innerHTML = `<span>UTC Time: </span> ${date.getUTCMilliseconds()}`;
+infoDay.textContent = daysOfWeek[date.getDay()];
