@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: 'Exo 2', sans-serif;
+	line-height: 1.6;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	width: 85%;
+	height: 100vh;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	column-gap: 3rem;
+	row-gap: 2rem;
+}
+
+.details__date {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.info__userName {
+	font-family: 'Orbitron', sans-serif;
+	/* font-size: 4rem; */
+	font-size: clamp(2.5rem, 1.3333rem + 3.3333vw, 4rem);
+	font-weight: 700;
+}
+
+.info__day,
+.info__utcTime,
+.info__track,
+.info__link {
+	/* font-size: 1.8rem; */
+	font-size: clamp(1.5rem, 1.2667rem + 0.6667vw, 1.8rem);
+}
+
+span {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 1054px) {
+	main {
+		margin-top: 3rem;
+	}
+}
